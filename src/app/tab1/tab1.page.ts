@@ -34,14 +34,13 @@ export class Tab1Page {
  //add const because its not public
     const name = this.name.replace(/\s/g, '');
     this.apiService.getGender(name).subscribe((response: any) => {
-      this.gender = response.gender
+      this.gender = response.gender;
     });
     this.apiService.getAge(name).subscribe((response: any) => {
       this.age = response.age;
   });
     this.apiService.getNationality(name).subscribe((response: any) => {
-      this.nationality = response;
-      console.log(this.nationality)
+      this.nationality = response.country[0].country_id;
   });
   }
 
