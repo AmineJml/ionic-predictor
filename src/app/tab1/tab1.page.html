@@ -8,17 +8,17 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-img class="image" src="https://docs-demo.ionic.io/assets/madison.jpg"></ion-img>
+  <ion-img class="image" src="{{image}}"></ion-img>
 </ion-content>
 
 <ion-content class="info">
   <ion-list>
-    <ion-header class="title">DOGO</ion-header>
-    <ion-input placeholder="Input dogo not cat ^^" class="input" type="text"></ion-input>
-    <ion-label color="primary" class="label">Gender</ion-label><br>
-    <ion-label color="secondary" class="label">Age</ion-label><br>
-    <ion-label color="danger" class="label"> Nationality</ion-label><br>
-    <ion-button shape="round">PRESS TO RAND</ion-button>
+    <ion-header class="title">DOGO {{title}}</ion-header>
+    <ion-input [(ngModel)]="name" placeholder="Input dogo not cat ^^" class="input" type="text"></ion-input>
+    <ion-label color="primary" class="label">Gender: {{gender}} </ion-label><br>
+    <ion-label color="secondary" class="label">Age: {{age}}</ion-label><br>
+    <ion-label color="danger" class="label"> Nationality: {{nationality}}</ion-label><br>
+    <ion-button (click)="pressMe()" shape="round">PRESS TO RAND</ion-button>
 
   </ion-list>
 </ion-content>
